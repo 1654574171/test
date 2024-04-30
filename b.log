@@ -1,4 +1,4 @@
-INFO:root:Case: Reentrancy: 2
+INFO:root:Case: Reentrancy: 1
 INFO:root:Bug Abstract: 573: CALL:recipient direct taint
 INFO:root:Bug Line: 10:15: Warning:          if (!msg.sender.call.value(4 ether)()
 INFO:root:Bug test case: {'callReturn': {}, 'input': {'Id_size_7': '3'}, 'state': {'Ia_store-2-locked_508': '0'}, 'other': {}, 'block': {}}
