@@ -1,0 +1,15 @@
+INFO:root:Case: Reentrancy: 2
+INFO:root:Bug Abstract: 573: CALL:recipient direct taint
+INFO:root:Bug Line: 10:15: Warning:          if (!msg.sender.call.value(4 ether)()
+INFO:root:Bug test case: {'callReturn': {}, 'input': {'Id_size_7': '3'}, 'state': {'Ia_store-2-locked_508': '0'}, 'other': {}, 'block': {}}
+INFO:root:Case: Pseudorandom Generator: 2
+INFO:root:Bug Abstract: 573: CALL:pathcondition
+INFO:root:Bug Line: 10:15: Warning:          if (!msg.sender.call.value(4 ether)()
+INFO:root:Bug test case: {'callReturn': {}, 'input': {'Id_0_15': '48894394118911117366788716431684379107450818423572849768182488307261750902784', 'Id_size_7': '4'}, 'state': {'Ia_store-2-locked_508': '0', 'Ia_store-some_var_8_970-balanceOf[msg.sender]_971': '57896044618658097711785492504343953926634992332820282019728792003956564819968'}, 'other': {'some_var_9_886': '1'}, 'block': {}}
+INFO:root:Bug Abstract: 666:SSTORE:pathcondition
+INFO:root:Bug Line: 14:7: Warning:       balanceOf[msg.sender] -= 2
+INFO:root:Bug test case: {'callReturn': {'call_return_bool_taint573': '115792089237316195423570985008687907853269984665640564039457584007913129639935'}, 'input': {'Id_0_15': '48894394118911117366788716431684379107450818423572849768182488307261750902784', 'Id_size_7': '4'}, 'state': {'Ia_store-2-locked_508': '0', 'Ia_store-some_var_8_970-balanceOf[msg.sender]_971': '57896044618658097711785492504343953926634992332820282019728792003956564819968'}, 'other': {'some_var_9_886': '1'}, 'block': {}}
+INFO:root:Case: Integer Overflow: 1
+INFO:root:Bug Abstract: 829:ADD:Integer Overflow
+INFO:root:Bug Line: 46:8: Warning:        balanceOf[msg.sender] += _value
+INFO:root:Bug test case: {'callReturn': {}, 'input': {'Id_0_15': '26895562351397323995693300438940610003702789896999315480554580105710165557248', 'Id__value': '115792089237316195423570985008687907853269984665640564039457584007913129639935', 'Id_size_7': '4'}, 'state': {'Ia_store-some_var_6_823-balanceOf[msg.sender]_828': '1', 'Iv': '0'}, 'other': {}, 'block': {}}
